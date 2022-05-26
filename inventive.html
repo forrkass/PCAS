@@ -3,13 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Собери персонажа сам</title>
+<link href="jq-skywheel.css" rel="stylesheet">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+    <script src="https://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+
 <style type="text/css">
 html {
 background: url("back/futer.png") no-repeat bottom center,
 url("back/background.jpg") no-repeat top center,
 url("back/backgr.jpg") repeat top center;
-height: 100%;
+height: auto;
 min-height: 800px;
 }
 
@@ -27,8 +31,17 @@ overflow: hidden;
 z-index: 1;
 }
 
-#parallax {
+#adopt {
+background: url("back/adopt.png") no-repeat top center;
+width: auto;
+height: 1000px;
 position: relative;
+z-index: 2;
+margin: -330px auto 120px auto;
+}
+
+#parallax {
+ position: relative;
 max-width: 1900px;
 height: 670px;
   background-image: url("back/top.png"), url("back/center.png"), url("back/bottom.png");
@@ -43,18 +56,43 @@ margin: auto;
 </head>
 <body>
 <div id="map">
-<img src="back\minpict.png" style="width: 570px; height: 90px;" usemap="#mapwr">
+<img src="back/minpict.png" style="width: 570px; height: 90px;" usemap="#mapwr">
 	<map name="mapwr">
-	<area shape="poly" alt="О проекте" coords="129,48,128,52,127,60,127,69,182,78,237,87,274,86,311,85,324,84,338,84,338,76,338,69,337,63,337,58,288,59,240,59,186,52,132,45,130,45,129,45" href="about" target="_blank">
-	<area shape="poly" alt="Собери персонажа сам" coords="412,47,371,56,370,57,370,57,373,70,375,82,375,83,376,83,421,73,466,63,466,63,466,62,461,50,456,37,455,37,454,37" href="inventive" target="_blank">
-	<area shape="poly" alt="Команда" coords="5,13,1,24,1,25,2,25,40,40,78,55,79,56,80,56,84,44,89,33,88,32,88,31,49,17,11,2,10,2,9,2" href="team" target="_blank">
+	<area shape="poly" alt="Собери персонажа сам" coords="129,48,128,52,127,60,127,69,182,78,237,87,274,86,311,85,324,84,338,84,338,76,338,69,337,63,337,58,288,59,240,59,186,52,132,45,130,45,129,45" href="creatore" target="_blank">
+	<area shape="poly" alt="Команда" coords="412,47,371,56,370,57,370,57,373,70,375,82,375,83,376,83,421,73,466,63,466,63,466,62,461,50,456,37,455,37,454,37" href="team" target="_blank">
+	<area shape="poly" alt="О проекте" coords="5,13,1,24,1,25,2,25,40,40,78,55,79,56,80,56,84,44,89,33,88,32,88,31,49,17,11,2,10,2,9,2" href="about" target="_blank">
 	<area shape="poly" alt="Мы в VK" coords="523,13,492,26,490,27,489,28,494,39,500,51,501,51,502,51,535,36,568,22,563,12,557,1,556,1,555,1" href="https://vk.com/pussycatadoptshop" target="_blank">
   </map>
   </div>
-
-<div id="parallax"></div>
   
-<script>
+<div id="parallax"></div>
+<div id="adopt">
+ <ul id="ran">
+      <li><img src="back/face/1.png"/></li>
+      <li><img src="back/face/2.png"/></li>
+      <li><img src="back/face/3.png"/></li>
+      <li><img src="back/face/4.png"/></li>
+      <li><img src="back/face/5.png"/></li>
+      <li><img src="back/face/6.png"/></li>
+      <li><img src="back/face/7.png"/></li>
+	  <li><img src="back/face/8.png"/></li>
+    </ul>
+	<ul id="ran2">
+      <li><img src="back/head/1.png"/></li>
+      <li><img src="back/head/2.png"/></li>
+      <li><img src="back/head/3.png"/></li>
+      <li><img src="back/head/4.png"/></li>
+    </ul>
+    </div>
+    <div id="respond"></div>
+</div>
+
+<script type="text/javascript" src="jq-skywheel.js"></script>
+    <script type="text/javascript">
+    $("#ran").skywheel({effect:2,width:"auto",height:"auto"});
+	$("#ran2").skywheel({effect:2,width:"auto",height:"auto"});
+    </script>  
+<script type="text/javascript">
 (function() {
     // Add event listener
     document.addEventListener("mousemove", parallax);
