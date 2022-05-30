@@ -3,19 +3,50 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>О проекте</title>
+<link href="jq-skywheel.css" rel="stylesheet">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+    <script src="https://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+
 <style type="text/css">
+@font-face {
+  font-family: 'bebas';
+  font-style: normal;
+  font-display: swap;
+  src: url("back/bebas.otf") format('opentype');
+}
+
 html {
 background: url("back/futer.png") no-repeat bottom center,
 url("back/background.jpg") no-repeat top center,
 url("back/backgr.jpg") repeat top center;
-height: 100%;
-min-height: 800px;
+height: auto;
+min-height: 1000px;
+min-width: 1200px;
 }
 
 body {
 	margin: auto;
 	overflow-x: hidden;
+}
+
+p::selection, a::selection {
+background: rgba(20, 25, 21, 0.5);
+}
+
+p:first-letter {
+  color: #b2d9c3;
+  font-size: 25px;
+}
+
+a {
+color: #daafe7;
+text-decoration: none;
+}
+
+a:hover {
+color: #9beadb;
+text-decoration: none;
 }
 
 #map {
@@ -24,7 +55,43 @@ position: relative;
 width: 570px;
 height: 90px;
 overflow: hidden;
+z-index: 3;
+}
+
+#project {
+width: 1024px;
+height: 750px;
+position: relative;
+margin: -520px auto 0px auto;
+}
+
+#pers {
+position: absolute;
+top: -110px;
+margin: auto;
+left: -115px;
 z-index: 1;
+pointer-events: none;
+}
+
+#pers::selection {
+background: rgba(0, 0, 0, 0);
+}
+
+#text { 
+text-align: justify;
+font-size: 20px;
+color: #a1bfae;
+padding: 0px 0px 0px 40px;
+font-family: bebas;
+text-shadow: 0px 0px 13px rgba(51, 164, 125, 0.58), 0px 3px 3px rgba(13, 30, 24, 0.44);
+width: 680px;
+position: relative;
+z-index: 3;
+left: 300px;
+font-style: normal;
+font-weight: lighter;
+text-indent: -22px;
 }
 
 #parallax {
@@ -37,24 +104,39 @@ height: 670px;
   background-position: 50% -300px, 50% -300px, 50% 0px;
   top: -110px;
 margin: auto;
+z-index: 2;
 }
 
 </style>
 </head>
 <body>
 <div id="map">
-<img src="back\minpict.png" style="width: 570px; height: 90px;" usemap="#mapwr">
+<img src="back/minpict.png" style="width: 570px; height: 90px;" usemap="#mapwr">
 	<map name="mapwr">
-	<area shape="poly" alt="О проекте" coords="129,48,128,52,127,60,127,69,182,78,237,87,274,86,311,85,324,84,338,84,338,76,338,69,337,63,337,58,288,59,240,59,186,52,132,45,130,45,129,45" href="about" target="_blank">
-	<area shape="poly" alt="Собери персонажа сам" coords="412,47,371,56,370,57,370,57,373,70,375,82,375,83,376,83,421,73,466,63,466,63,466,62,461,50,456,37,455,37,454,37" href="creatore" target="_blank">
-	<area shape="poly" alt="Команда" coords="5,13,1,24,1,25,2,25,40,40,78,55,79,56,80,56,84,44,89,33,88,32,88,31,49,17,11,2,10,2,9,2" href="team" target="_blank">
+	<area shape="poly" alt="Собери персонажа сам" coords="129,48,128,52,127,60,127,69,182,78,237,87,274,86,311,85,324,84,338,84,338,76,338,69,337,63,337,58,288,59,240,59,186,52,132,45,130,45,129,45" href="creatore" target="_blank">
+	<area shape="poly" alt="Команда" coords="412,47,371,56,370,57,370,57,373,70,375,82,375,83,376,83,421,73,466,63,466,63,466,62,461,50,456,37,455,37,454,37" href="team" target="_blank">
+	<area shape="poly" alt="О проекте" coords="5,13,1,24,1,25,2,25,40,40,78,55,79,56,80,56,84,44,89,33,88,32,88,31,49,17,11,2,10,2,9,2" href="about" target="_blank">
 	<area shape="poly" alt="Мы в VK" coords="523,13,492,26,490,27,489,28,494,39,500,51,501,51,502,51,535,36,568,22,563,12,557,1,556,1,555,1" href="https://vk.com/pussycatadoptshop" target="_blank">
   </map>
   </div>
-
-<div id="parallax"></div>
   
-<script>
+<div id="parallax"></div>
+
+<div id="project">
+<img id="pers" src="back/mascot.png"/>
+<div id="text"><p>Командой адоптшопа  <a href="https://vk.com/pussycatadoptshop">.pussycat adopt shop</a> к летнему ежегодному интерактиву 2022 года был разработан <a href="">мейкер</a> для создания персонажа.</p>
+<p>В качестве основы, была взята база на чиби персонажа, созданная <a href="https://vk.com/deko_owo">Deko</a>. Целью проекта была совместная разработка собственного мейкера, в котором художники и адоптеры группы <a href="https://vk.com/pussycatadoptshop">.pussycat adopt shop</a> создают свои детали к основной базе.</p>
+<p>При проведении летнего интерактива 2022 года, подписчики адоптшопа <a href="https://vk.com/pussycatadoptshop">.pussycat adopt shop</a>, могут самостоятельно "собрать" будущего персонажа для дальнейшей покраски и отрисовке на основе данной базы.</p>
+<p>Для возможности участия в интерактиве, необходимо:<br>
+- быть участником группы <a href="https://vk.com/pussycatadoptshop">.pussycat adopt shop в ВКонтакте</a>;<br>
+- сделать и направить "скриншот" результата сборки <a href="https://vk.com/pussycatadoptshop">в соответствующую тему в нашей группе</a>.</p>
+<p>По окончанию проведения интерактива и подведению итогов, счастливчику будет проработан и покрашен направленным им ранее "скриншот".</p>
+<p>Данный мейкер не предназначен для коммерческого использования третьими лицами без разрешения администрации проекта.</p>
+<p>Ознакомиться с художниками можно в разделе <a href="team">"Команда"</a>.</p>
+</div>
+</div>
+
+<script type="text/javascript">
 (function() {
     // Add event listener
     document.addEventListener("mousemove", parallax);
@@ -75,6 +157,5 @@ margin: auto;
 
 })();
 </script>
-  
 </body>
 </html>
