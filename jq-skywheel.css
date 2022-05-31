@@ -1,10 +1,9 @@
-
- #ran {
+#ran {
   margin: auto;
   position: relative;
-  width:252px;
   padding: 0px;
-  top: 231px;
+width: 627px;
+top: 0px;
 }
 
 #ran.jq_skywheel li:before {
@@ -15,9 +14,9 @@ pointer-events: painted;
 z-index: 50;
 display: block;
 position: absolute;
-top: 10px;
+top: 255px;
 margin: auto;
-left: 20px;
+left: 210px;
 }
 
 #ran:hover:before {
@@ -28,9 +27,9 @@ height: 140px;
 z-index: 3;
 display: block;
 position: absolute;
-top: 10px;
+top: 255px;
 margin: auto;
-left: 20px;
+left: 210px;
  pointer-events: none;
 }
 
@@ -41,8 +40,8 @@ left: 20px;
  #ran2 {
   margin: auto;
   position: relative;
-  width: 502px;
-  top: 58px;
+width: 627px;
+top: 0px;
   padding: 0px;
 }
 
@@ -54,9 +53,9 @@ pointer-events: painted;
 z-index: 50;
 display: block;
 position: absolute;
-top: 70px;
+top: 155px;
 margin: auto;
-left: 135px;
+left: 200px;
 }
 
 #ran2:hover:before {
@@ -67,9 +66,9 @@ height: 135px;
 z-index: 3;
 display: block;
 position: absolute;
-top: 70px;
+top: 155px;
 margin: auto;
-left: 135px;
+left: 200px;
  pointer-events: none;
 }
 
@@ -80,8 +79,8 @@ left: 135px;
  #ran3 {
   margin: auto;
   position: relative;
-  width: 483px;
-  top: 405px;
+width: 627px;
+top: 0px;
   padding: 0px;
 }
 
@@ -94,9 +93,9 @@ pointer-events: painted;
 z-index: 50;
 display: block;
 position: absolute;
-top: 20px;
+top: 405px;
 margin: auto;
-left: 148px;
+left: 218px;
 }
 
 #ran3:hover:before {
@@ -107,9 +106,9 @@ height: 110px;
 z-index: 3;
 display: block;
 position: absolute;
-top: 20px;
+top: 405px;
 margin: auto;
-left: 148px;
+left: 218px;
  pointer-events: none;
 }
 
@@ -120,8 +119,8 @@ left: 148px;
  #ran4 {
   margin: auto;
   position: relative;
-width: 189px;
-top: 534px;
+width: 627px;
+top: 0px;
   padding: 0px;
 }
 
@@ -133,9 +132,9 @@ pointer-events: painted;
 z-index: 50;
 display: block;
 position: absolute;
-top: 20px;
+top: 540px;
 margin: auto;
-left: -7px;
+left: 212px;
 }
 
 #ran4:hover:before {
@@ -146,9 +145,9 @@ height: 110px;
 z-index: 3;
 display: block;
 position: absolute;
-top: 20px;
+top: 540px;
 margin: auto;
-left: -7px;
+left: 212px;
  pointer-events: none;
 }
 
@@ -160,8 +159,8 @@ left: -7px;
  #ran5 {
   margin: auto;
   position: relative;
-width: 163px;
-top: 658px;
+width: 627px;
+top: 0px;
   padding: 0px;
 }
 
@@ -173,9 +172,9 @@ pointer-events: painted;
 z-index: 50;
 display: block;
 position: absolute;
-top: 136px;
+top: 800px;
 margin: auto;
-left: 10px;
+left: 242px;
 }
 
 #ran5:hover:before {
@@ -186,9 +185,9 @@ height: 100px;
 z-index: 3;
 display: block;
 position: absolute;
-top: 136px;
+top: 800px;
 margin: auto;
-left: 10px;
+left: 242px;
  pointer-events: none;
 }
 
@@ -199,8 +198,8 @@ left: 10px;
  #ran6 {
   margin: auto;
   position: relative;
-width: 509px;
-top: 230px;
+width: 627px;
+top: 0px;
   padding: 0px;
 }
 
@@ -212,9 +211,9 @@ pointer-events: painted;
 z-index: 50;
 display: block;
 position: absolute;
-top: -197px;
+top: 36px;
 margin: auto;
-left: 140px;
+left: 200px;
 }
 
 #ran6:hover:before {
@@ -225,9 +224,9 @@ height: 120px;
 z-index: 3;
 display: block;
 position: absolute;
-top: -197px;
+top: 36px;
 margin: auto;
-left: 140px;
+left: 200px;
  pointer-events: none;
 }
 
@@ -238,8 +237,8 @@ left: 140px;
  #ran7 {
   margin: auto;
   position: relative;
-width: 525px;
-top: 232px;
+width: 627px;
+top: 0px;
   padding: 0px;
 }
 
@@ -251,9 +250,9 @@ pointer-events: painted;
 z-index: 50;
 display: block;
 position: absolute;
-top: 410px;
+top: 667px;
 margin: auto;
-left: 130px;
+left: 175px;
 }
 
 #ran7:hover:before {
@@ -264,9 +263,9 @@ height: 120px;
 z-index: 3;
 display: block;
 position: absolute;
-top: 410px;
+top: 667px;
 margin: auto;
-left: 130px;
+left: 175px;
  pointer-events: none;
 }
 
@@ -348,9 +347,9 @@ background: none !important;
     z-index: 3;
     -moz-transform: scale(1.0) translate(-100%,0px);
     -webkit-transform: scale(1.0) translate(-100%,0px);
-    transform: scale(1.0) translate(-100%,0px);
+    transform: scale(0.7) translate(-635px,0px);
 	opacity: 1 !important;
-background: url("back/backslide.jpg") repeat 7px -7px;
+background: url("back/blank.png") no-repeat 0px 0px, url("back/backslide.jpg") repeat 9px 0px;
 	border-radius: 40px 0px 0px 40px;
 	box-shadow: -8px 0px 10px 10px #151a164f;
 }
@@ -358,9 +357,9 @@ background: url("back/backslide.jpg") repeat 7px -7px;
     z-index: 3;
     -moz-transform: scale(1.0) translate(100%,0px);
     -webkit-transform: scale(1.0) translate(100%,0px);
-    transform: scale(1.0) translate(100%,0px);
+    transform: scale(0.7) translate(635px,0px);
 	opacity: 1 !important;
-background: url("back/backslide.jpg") repeat 19px -7px;
+background: url("back/blank.png") no-repeat 0px 0px, url("back/backslide.jpg") repeat 9px 0px;
 	border-radius: 0px 40px 40px 0px;
 	box-shadow: 8px 0px 10px 10px #151a164f;
 }
@@ -376,12 +375,12 @@ background: url("back/backslide.jpg") repeat 19px -7px;
     -moz-transform: scale(1.0) translate(0px,0px);
     transform: scale(1.0) translate(0px,0px);
 	opacity: 1 !important;
-background: url("back/backslide.jpg") repeat 13px -7px;
+background: url("back/blank.png") no-repeat 0px 0px, url("back/backslide.jpg") repeat 9px 0px;
 box-shadow: 0px 0px 40px 25px #ad85ce7a;
 pointer-events: painted !important;
+border-radius: 20px 20px 20px 20px;
 }
 .jq_skywheel .chosen{
 	z-index: 2;
 opacity: 1;
 }
-
