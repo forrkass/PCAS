@@ -8,7 +8,113 @@
 	<script type="text/javascript" src="js/jquery.js"></script>
     <script src="https://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
 
+	<script type="text/javascript">
+$(window).load(function() {
+  setTimeout(function () { 
+    $(".box").delay(100).fadeOut().remove();   
+  }, 10000);  
+});
+</script>
+	
 <style type="text/css">
+	
+	
+.load ul {
+   margin: 0;
+   padding: 0;
+   display: flex;
+ }
+.load ul li {
+   list-style: none;
+   color: #162018;
+   font-size: 60px;
+   letter-spacing: 15px;
+   font-family: bebas;
+   animation: lighting 4s linear infinite;
+ }
+.load ul li:nth-child(1) {
+   animation-delay: 0;
+ }
+.load ul li:nth-child(2) {
+   animation-delay: 0.1s;
+ }
+.load ul li:nth-child(3) {
+   animation-delay: 0.3s;
+ }
+.load ul li:nth-child(4) {
+   animation-delay: 0.6s;
+ }
+.load ul li:nth-child(5) {
+   animation-delay: 0.8s;
+ }
+.load ul li:nth-child(6) {
+   animation-delay: 1s;
+ }
+.load ul li:nth-child(7) {
+   animation-delay: 1.2s;
+ }
+.load ul li:nth-child(8) {
+   animation-delay: 1.4s;
+ }
+.load ul li:nth-child(9) {
+   animation-delay: 1.6s;
+ }
+.load ul li:nth-child(10) {
+   animation-delay: 1.8s;
+ }
+.load ul li:nth-child(11) {
+   animation-delay: 2s;
+ }
+ .load ul li:nth-child(12) {
+   animation-delay: 2.1s;
+ }
+.load ul li:nth-child(13) {
+   animation-delay: 2.2s;
+ }
+.load ul li:nth-child(14) {
+   animation-delay: 2.3s;
+ }
+ 
+ @keyframes lighting {
+   0%{
+     color: #162018;
+     text-shadow: none;
+   }
+   90%{
+     color: #162018;
+     text-shadow: none;
+   }
+   100%{
+     color: #fff;
+     text-shadow: 0 0 10px #fff, 0 0 60px #28f5ff;
+   }
+ }
+
+.box {
+display: flex;
+flex: 1;
+flex-direction: column;
+justify-content: flex-start;
+justify-content: center;
+align-items: center;
+position: fixed;
+width: 100%;
+height: 100%;
+top: 0px;
+left: 0px;
+z-index: 999;
+background: url("back/loadback.jpg") no-repeat 50% center,
+url("back/backgr.jpg") repeat top center;
+}
+
+	
+@font-face {
+  font-family: 'bebas';
+  font-style: normal;
+  font-display: swap;
+  src: url("back/bebas.otf") format('opentype');
+}		
+	
 html {
 background: url("back/futer.png") no-repeat bottom center,
 url("back/backmaker.png") no-repeat center 280px,
@@ -57,6 +163,27 @@ margin: auto;
 </style>
 </head>
 <body>
+	
+<div class="box">
+<div class="load">
+<ul>
+    <li>.</li>
+    <li>.</li>
+    <li>.</li>
+    <li>З</li>
+    <li>А</li>
+    <li>Г</li>
+    <li>Р</li>
+    <li>У</li>
+    <li>З</li>
+    <li>К</li>
+    <li>А</li>
+    <li>.</li>
+    <li>.</li>
+    <li>.</li>
+	</ul>
+</div></div>	
+	
 <div id="map">
 <img src="back/minpict.png" style="width: 570px; height: 90px;" usemap="#mapwr">
 	<map name="mapwr">
