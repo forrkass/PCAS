@@ -5,17 +5,54 @@
 <title>Команда</title>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <style type="text/css">
+
+@font-face {
+  font-family: 'bebas';
+  font-style: normal;
+  font-display: swap;
+  src: url("back/bebas.otf") format('opentype');
+}
+
 html {
 background: url("back/futer.png") no-repeat bottom center,
 url("back/background.jpg") no-repeat top center,
 url("back/backgr.jpg") repeat top center;
 height: 100%;
-min-height: 800px;
+min-height: 900px;
+min-width: 1220px;
 }
 
 body {
 	margin: auto;
 	overflow-x: hidden;
+}
+
+p::selection, a::selection {
+background: rgba(20, 25, 21, 0.5);
+}
+
+p:first-letter {
+  color: #b2d9c3;
+  font-size: 25px;
+}
+
+a {
+color: #daafe7;
+text-decoration: none;
+}
+
+p {
+text-align: justify;
+font-size: 20px;
+color: #a1bfae;
+padding: 0px 0px 0px 0px;
+font-family: bebas;
+text-shadow: 0px 0px 13px rgba(51, 164, 125, 0.58), 0px 3px 3px rgba(13, 30, 24, 0.44);
+}
+
+a:hover {
+color: #9beadb;
+text-decoration: none;
 }
 
 #map {
@@ -37,24 +74,307 @@ height: 670px;
   background-position: 50% -300px, 50% -300px, 50% 0px;
   top: -110px;
 margin: auto;
+pointer-events: none;
+}
+
+#container {
+  position: relative;
+}
+
+.tabs {
+  width: 1030px;
+  padding: 0px;
+  margin: 0px -580px;
+  position: absolute;
+  top: 145px;
+  left: 50%;
+  z-index: 0;
+}
+
+section {
+  display: none;
+  padding: 0px 15px 15px 15px;
+  position: absolute;
+  top: 0px;
+  left: 170px;
+}
+
+input { 
+  display: none; 
+} 
+label {
+  display: block;
+  width: 150px;
+  padding: 15px;
+  text-align: justify;
+  font-size: 20px;
+  color: #78b2bb;
+  padding: 10px 0px;
+  font-family: bebas;
+  text-shadow: 0px 0px 13px rgba(51, 164, 125, 0.58), 0px 3px 3px rgba(13, 30, 24, 0.44);
+  cursor: pointer;
+  height: 35px;
+  top: 0px;
+  position: relative;
+}
+
+input:checked + label { 
+text-align: center;
+font-size: 32px;
+font-family: bebas;
+  text-shadow: 0px 0px 22px rgb(234, 96, 212);
+  color: #c394dd;
+} 
+
+#tab1:checked ~ #content1, #tab2:checked ~ #content2, #tab3:checked ~ #content3, #tab4:checked ~ #content4, #tab5:checked ~ #content5, #tab6:checked ~ #content6, #tab7:checked ~ #content7 { 
+  display: block; 
+} 
+
+section { 
+  animation: scale 0.7s ease-in-out; 
+} 
+
+@keyframes scale { 
+  0% { 
+  transform: scale(0.9); 
+  opacity: 0; 
+  } 
+  50% { 
+  transform: scale(1.005); 
+  opacity: 0.5; 
+  } 
+  100% { 
+  transform: scale(1); 
+  opacity: 1; 
+  } 
+}
+
+.slider, .slider1, .slider2, .slider3, .slider4{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  margin: 0px auto 0 auto;
+}
+
+.slider ul, .slider1 ul, .slider2 ul, .slider3 ul, .slider4 ul{
+  position:relative;
+  width:100%;
+  margin:0;
+  padding:0;
+  height:200px;
+  display:inline-block;
+  list-style:none;
+  background:#458;
+}
+
+
+.slider ul li, .slider1 ul li, .slider2 ul li, .slider3 ul li, .slider4 ul li{
+  position:relative;
+  float:left;
+  display:inline-block;
+  margin:0;
+  padding:0;
+  width:770px;
+  height:400px;
+  background:#fff;
+  text-align:center;
+  line-height:300px;
+  color:#333;
+}
+
+
+.control{
+  position: absolute;
+  top: 40%;
+  z-index: 2;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: #36665a;
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  opacity: 0.6;
+  cursor: pointer;
+  font-family: Bebas;
+}
+
+.prev{
+  left:0px;
+}
+
+.next{
+  right:0px;
+}
+
+#imgs {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
 }
 
 </style>
 </head>
 <body>
 <div id="map">
-<img src="back\minpict.png" style="width: 570px; height: 90px;" usemap="#mapwr">
+<img src="back/minpict.png" style="width: 570px; height: 90px;" usemap="#mapwr">
 	<map name="mapwr">
-	<area shape="poly" alt="О проекте" coords="129,48,128,52,127,60,127,69,182,78,237,87,274,86,311,85,324,84,338,84,338,76,338,69,337,63,337,58,288,59,240,59,186,52,132,45,130,45,129,45" href="about" target="_blank">
-	<area shape="poly" alt="Собери персонажа сам" coords="412,47,371,56,370,57,370,57,373,70,375,82,375,83,376,83,421,73,466,63,466,63,466,62,461,50,456,37,455,37,454,37" href="creatore" target="_blank">
-	<area shape="poly" alt="Команда" coords="5,13,1,24,1,25,2,25,40,40,78,55,79,56,80,56,84,44,89,33,88,32,88,31,49,17,11,2,10,2,9,2" href="team" target="_blank">
+	<area shape="poly" alt="Собери персонажа сам" coords="129,48,128,52,127,60,127,69,182,78,237,87,274,86,311,85,324,84,338,84,338,76,338,69,337,63,337,58,288,59,240,59,186,52,132,45,130,45,129,45" href="inventive" target="_blank">
+	<area shape="poly" alt="Команда" coords="412,47,371,56,370,57,370,57,373,70,375,82,375,83,376,83,421,73,466,63,466,63,466,62,461,50,456,37,455,37,454,37" href="team" target="_blank">
+	<area shape="poly" alt="О проекте" coords="5,13,1,24,1,25,2,25,40,40,78,55,79,56,80,56,84,44,89,33,88,32,88,31,49,17,11,2,10,2,9,2" href="about" target="_blank">
 	<area shape="poly" alt="Мы в VK" coords="523,13,492,26,490,27,489,28,494,39,500,51,501,51,502,51,535,36,568,22,563,12,557,1,556,1,555,1" href="https://vk.com/pussycatadoptshop" target="_blank">
   </map>
   </div>
 
+<div id="container"> 
+<div class="tabs"> 
+<input id="tab1" type="radio" name="tabs" checked> 
+<label for="tab1" style="text-align:center; font-size: 32px; color: #81d4d8; text-shadow: 0px 0px 13px rgb(51, 164, 125);">Команда</label> 
+<br><br>
+<input id="tab2" type="radio" name="tabs"> 
+<label for="tab2">Deko</label> 
+
+<input id="tab3" type="radio" name="tabs"> 
+<label for="tab3">forrkass</label> 
+
+<input id="tab4" type="radio" name="tabs"> 
+<label for="tab4">UADGET_ART</label> 
+
+<input id="tab5" type="radio" name="tabs"> 
+<label for="tab5">seykuro</label> 
+
+<input id="tab6" type="radio" name="tabs"> 
+<label for="tab6">m4koch4n</label> 
+
+<input id="tab7" type="radio" name="tabs"> 
+<label for="tab7">ForumD.ru</label> 
+
+<section id="content1"> 
+<p>В разработке проекта приняли участие следующие художники адоптшопа <a href="https://vk.com/pussycatadoptshop" target="_blank">.pussycat adopt shop</a>:</p> 
+
+<p>1. <a href="https://vk.com/deko_owo" target="_blank">Deko</a><br>
+2. <a href="https://vk.com/forrkass" target="_blank">forrkass</a><br>
+3. <a href="https://vk.com/uadgetart" target="_blank">UADGET_ART</a><br>
+4. <a href="https://vk.com/seseseykuro" target="_blank">seykuro</a><br>
+5. <a href="https://vk.com/m4koch4n" target="_blank">m4koch4n</a>
+<a href=""></a>
+
+<p>Созданием макета, вёрсткой, а также адаптацией дизайна сайта занимались <a href="https://vk.com/forrkass" target="_blank">forrkass</a> при поддержке общества анонимных злодеев. Все визуальные эффекты, текстуры и иные графические материалы были созданы специально для проекта.</p> 
+<p>При вёрстке использован скрипт <a href="https://www.jqueryscript.net/animation/jQuery-Cover-Flow-Like-List-Animation-Plugin-skywheel.html" target="_blank">jQuery Cover Flow-Like List Animation Plugin - skywheel</a>, лицензия MIT.</p> 
+<p>Отдельная благодарность арт форуму <a href="https://forumd.ru/pages/index" target="_blank">ForumD.ru</a> за оказание поддержки и технической помощи. Ребята, Вы как всегда спасаете :) </p> 
+
+</section>  
+<section id="content2"> 
+<p style="text-align: center;font-size: 25px;">Тег: <a href="https://vk.com/feed?section=search&q=%23PCAS_Badger" target="_blank">#PCAS_Badger</a> &emsp; &diams; &emsp;  Площадка: <a href="https://vk.com/deko_owo" target="_blank">Deko</a> &emsp; &hearts; &emsp; Автор: <a href="https://vk.com/id186174497" target="_blank">Диана Барсук</a></p> 
+<div class="main">
+<div class="slider">
+
+  <a href="#0" class="next control">&#9658;</a>
+  <a href="#0" class="prev control">&#9668;</a>
+
+ <ul>
+    <li><img id="imgs" src="back/works/Deko/1.jpg"/></li>
+    <li><img id="imgs" src="back/works/Deko/2.jpg"/></li>
+    <li><img id="imgs" src="back/works/Deko/3.jpg"/></li>
+    <li><img id="imgs" src="back/works/Deko/4.jpg"/></li>
+  </ul>
+</div></div>
+
+</section>  
+
+<section id="content3"> 
+
+<p style="text-align: center;font-size: 25px;">Тег: <a href="https://vk.com/feed?section=search&q=%23PCAS_Forrkass" target="_blank">#PCAS_Forrkass</a> &emsp; &diams; &emsp;  Площадка: <a href="https://vk.com/forrkass" target="_blank">Без имени.jpeg</a> &emsp; &hearts; &emsp; Автор: <a href="https://vk.com/id379192997" target="_blank">Касси Форрестер</a></p> 
+
+<div class="main">
+<div class="slider1">
+
+  <a href="#0" class="next control">&#9658;</a>
+  <a href="#0" class="prev control">&#9668;</a>
+
+ <ul>
+    <li><img id="imgs" src="back/works/forrkass/1.jpg"/></li>
+    <li><img id="imgs" src="back/works/forrkass/2.jpg"/></li>
+    <li><img id="imgs" src="back/works/forrkass/3.jpg"/></li>
+    <li><img id="imgs" src="back/works/forrkass/4.jpg"/></li>
+  </ul>
+</div></div>
+
+</section>  
+
+<section id="content4"> 
+<p style="text-align: center;font-size: 25px;">Тег: <a href="https://vk.com/feed?section=search&q=%23PCAS_Uadget" target="_blank">#PCAS_Uadget</a> &emsp; &diams; &emsp; 
+Площадка: <a href="https://vk.com/uadgetart" target="_blank">UADGET_ART</a> &emsp; &hearts; &emsp;
+Автор: <a href="https://vk.com/incognito_lo" target="_blank">Лолита Юрьевна</a></p> 
+<div class="main">
+<div class="slider2">
+
+  <a href="#0" class="next control">&#9658;</a>
+  <a href="#0" class="prev control">&#9668;</a>
+
+ <ul>
+    <li><img id="imgs" src="back/works/UADGET_ART/1.jpg"/></li>
+    <li><img id="imgs" src="back/works/UADGET_ART/2.jpg"/></li>
+    <li><img id="imgs" src="back/works/UADGET_ART/3.jpg"/></li>
+    <li><img id="imgs" src="back/works/UADGET_ART/4.jpg"/></li>
+  </ul>
+</div></div>
+</section>  
+
+<section id="content5"> 
+<p style="text-align: center;font-size: 25px;">Тег: <a href="https://vk.com/feed?section=search&q=%23PCAS_SeiSai" target="_blank">#PCAS_SeiSai</a>
+Площадка: <a href="https://vk.com/seseseykuro" target="_blank">SEI SAI | seykuro</a>
+Автор: <a href="https://vk.com/sosisonchek" target="_blank">Seykuro Frankfurt</a></p> 
+<div class="main">
+<div class="slider3">
+
+  <a href="#0" class="next control">&#9658;</a>
+  <a href="#0" class="prev control">&#9668;</a>
+
+ <ul>
+    <li><img id="imgs" src="back/works/seykuro/1.jpg"/></li>
+    <li><img id="imgs" src="back/works/seykuro/2.jpg"/></li>
+    <li><img id="imgs" src="back/works/seykuro/3.jpg"/></li>
+    <li><img id="imgs" src="back/works/seykuro/4.jpg"/></li>
+  </ul>
+</div></div>
+</section>  
+
+<section id="content6"> 
+<p style="text-align: center;font-size: 25px;">Тег: <a href="https://vk.com/feed?section=search&q=%23PCAS_mako" target="_blank">#PCAS_mako</a> &emsp; &diams; &emsp; 
+Площадка: <a href="https://vk.com/m4koch4n" target="_blank">m4koch4n</a> &emsp; &hearts; &emsp;
+Автор: <a href="https://vk.com/mako4han" target="_blank">Mako Chan</a></p> 
+
+<div class="main">
+<div class="slider4">
+
+  <a href="#0" class="next control">&#9658;</a>
+  <a href="#0" class="prev control">&#9668;</a>
+
+ <ul>
+    <li><img id="imgs" src="back/works/m4koch4n/1.jpg"/></li>
+    <li><img id="imgs" src="back/works/m4koch4n/2.jpg"/></li>
+    <li><img id="imgs" src="back/works/m4koch4n/3.jpg"/></li>
+    <li><img id="imgs" src="back/works/m4koch4n/4.jpg"/></li>
+  </ul>
+</div></div>
+
+</section>  
+<section id="content7"> 
+<p>Команда <a href="https://forumd.ru/" target="_blank">ForumD.ru</a> - профессиональные дизайнеры и технические специалисты с большим опытом работы в сфере вебдизайна, графического дизайна и администрировании интернет-сообществ.</p>
+<p style="width: 100%;background: white;text-align: center;"><img src="https://s9.uploads.ru/IZbxC.jpg"/></p>
+<p>Форум представляет собой фриланс-площадку, объединяющую заказчиков и исполнителей. Помимо команды <a href="https://forumd.ru/" target="_blank">ForumD.ru</a>, на форуме принимают заказы как начинающие, так и опытные специалисты, а у заказчиков есть возможность оформить заказ бесплатно или в обмен на услуги.</p> 
+</p> 
+</section>  
+</div> 
+</div>
+
 <div id="parallax"></div>
   
-<script>
+<script type="text/javascript">
 (function() {
     // Add event listener
     document.addEventListener("mousemove", parallax);
@@ -74,6 +394,208 @@ margin: auto;
     }
 
 })();
+</script>
+
+<script type="text/javascript">
+$(function() {
+  
+  var slideCount =  $(".slider ul li").length;
+  var slideWidth =  $(".slider ul li").width();
+  var slideHeight =  $(".slider ul li").height();
+  var slideUlWidth =  slideCount * slideWidth;
+  
+  $(".slider").css({"max-width":slideWidth, "height": slideHeight});
+  $(".slider ul").css({"width":slideUlWidth, "margin-left": - slideWidth });
+  $(".slider ul li:last-child").prependTo($(".slider ul"));
+  
+  function moveLeft() {
+    $(".slider ul").stop().animate({
+      left: + slideWidth
+    },700, function() {
+      $(".slider ul li:last-child").prependTo($(".slider ul"));
+      $(".slider ul").css("left","");
+    });
+  }
+  
+  function moveRight() {
+    $(".slider ul").stop().animate({
+      left: - slideWidth
+    },700, function() {
+      $(".slider ul li:first-child").appendTo($(".slider ul"));
+      $(".slider ul").css("left","");
+    });
+  }
+  
+  
+  $(".next").on("click",function(){
+    moveRight();
+  });
+  
+  $(".prev").on("click",function(){
+    moveLeft();
+  });
+ 
+});
+
+$(function() {
+  
+  var slideCount =  $(".slider1 ul li").length;
+  var slideWidth =  $(".slider1 ul li").width();
+  var slideHeight =  $(".slider1 ul li").height();
+  var slideUlWidth =  slideCount * slideWidth;
+  
+  $(".slider1").css({"max-width":slideWidth, "height": slideHeight});
+  $(".slider1 ul").css({"width":slideUlWidth, "margin-left": - slideWidth });
+  $(".slider1 ul li:last-child").prependTo($(".slider1 ul"));
+  
+  function moveLeft() {
+    $(".slider1 ul").stop().animate({
+      left: + slideWidth
+    },700, function() {
+      $(".slider1 ul li:last-child").prependTo($(".slider1 ul"));
+      $(".slider1 ul").css("left","");
+    });
+  }
+  
+  function moveRight() {
+    $(".slider1 ul").stop().animate({
+      left: - slideWidth
+    },700, function() {
+      $(".slider1 ul li:first-child").appendTo($(".slider1 ul"));
+      $(".slider1 ul").css("left","");
+    });
+  }
+  
+  
+  $(".next").on("click",function(){
+    moveRight();
+  });
+  
+  $(".prev").on("click",function(){
+    moveLeft();
+  });
+ 
+});
+
+$(function() {
+  
+  var slideCount =  $(".slider2 ul li").length;
+  var slideWidth =  $(".slider2 ul li").width();
+  var slideHeight =  $(".slider2 ul li").height();
+  var slideUlWidth =  slideCount * slideWidth;
+  
+  $(".slider2").css({"max-width":slideWidth, "height": slideHeight});
+  $(".slider2 ul").css({"width":slideUlWidth, "margin-left": - slideWidth });
+  $(".slider2 ul li:last-child").prependTo($(".slider2 ul"));
+  
+  function moveLeft() {
+    $(".slider2 ul").stop().animate({
+      left: + slideWidth
+    },700, function() {
+      $(".slider2 ul li:last-child").prependTo($(".slider2 ul"));
+      $(".slider2 ul").css("left","");
+    });
+  }
+  
+  function moveRight() {
+    $(".slider2 ul").stop().animate({
+      left: - slideWidth
+    },700, function() {
+      $(".slider2 ul li:first-child").appendTo($(".slider2 ul"));
+      $(".slider2 ul").css("left","");
+    });
+  }
+  
+  
+  $(".next").on("click",function(){
+    moveRight();
+  });
+  
+  $(".prev").on("click",function(){
+    moveLeft();
+  });
+ 
+});
+
+$(function() {
+  
+  var slideCount =  $(".slider3 ul li").length;
+  var slideWidth =  $(".slider3 ul li").width();
+  var slideHeight =  $(".slider3 ul li").height();
+  var slideUlWidth =  slideCount * slideWidth;
+  
+  $(".slider3").css({"max-width":slideWidth, "height": slideHeight});
+  $(".slider3 ul").css({"width":slideUlWidth, "margin-left": - slideWidth });
+  $(".slider3 ul li:last-child").prependTo($(".slider3 ul"));
+  
+  function moveLeft() {
+    $(".slider3 ul").stop().animate({
+      left: + slideWidth
+    },700, function() {
+      $(".slider3 ul li:last-child").prependTo($(".slider3 ul"));
+      $(".slider3 ul").css("left","");
+    });
+  }
+  
+  function moveRight() {
+    $(".slider3 ul").stop().animate({
+      left: - slideWidth
+    },700, function() {
+      $(".slider3 ul li:first-child").appendTo($(".slider3 ul"));
+      $(".slider3 ul").css("left","");
+    });
+  }
+  
+  
+  $(".next").on("click",function(){
+    moveRight();
+  });
+  
+  $(".prev").on("click",function(){
+    moveLeft();
+  });
+ 
+});
+
+$(function() {
+  
+  var slideCount =  $(".slider4 ul li").length;
+  var slideWidth =  $(".slider4 ul li").width();
+  var slideHeight =  $(".slider4 ul li").height();
+  var slideUlWidth =  slideCount * slideWidth;
+  
+  $(".slider4").css({"max-width":slideWidth, "height": slideHeight});
+  $(".slider4 ul").css({"width":slideUlWidth, "margin-left": - slideWidth });
+  $(".slider4 ul li:last-child").prependTo($(".slider4 ul"));
+  
+  function moveLeft() {
+    $(".slider4 ul").stop().animate({
+      left: + slideWidth
+    },700, function() {
+      $(".slider4 ul li:last-child").prependTo($(".slider4 ul"));
+      $(".slider4 ul").css("left","");
+    });
+  }
+  
+  function moveRight() {
+    $(".slider4 ul").stop().animate({
+      left: - slideWidth
+    },700, function() {
+      $(".slider4 ul li:first-child").appendTo($(".slider4 ul"));
+      $(".slider4 ul").css("left","");
+    });
+  }
+  
+  
+  $(".next").on("click",function(){
+    moveRight();
+  });
+  
+  $(".prev").on("click",function(){
+    moveLeft();
+  });
+ 
+});
 </script>
   
 </body>
